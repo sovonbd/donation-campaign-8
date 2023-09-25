@@ -19,6 +19,7 @@ const Home = () => {
         <Searchbox></Searchbox>
         <div className="absolute w-full -top-16 opacity-25">
           <Banner></Banner>
+          
         </div>
       </div> */}
 

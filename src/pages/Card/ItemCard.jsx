@@ -7,10 +7,11 @@ const ItemCard = ({ card }) => {
     if (!donationItems) {
       addedToDonation.push(card);
       localStorage.setItem("donation", JSON.stringify(addedToDonation));
-      alert('items added')
+      alert("items added");
     } else {
       addedToDonation.push(...donationItems, card);
       localStorage.setItem("donation", JSON.stringify(addedToDonation));
+      alert("items added");
     }
   };
 
@@ -21,7 +22,7 @@ const ItemCard = ({ card }) => {
           <img className="z-0 w-full rounded-md" src={image} alt="Shoes" />
           <div className="bg-[#0B0B0B50] z-10 mx-auto absolute bottom-0 w-full p-9">
             <button onClick={handleClick} className="btn normal-case text-white rounded-md border-none px-6 py-4" style={{ backgroundColor: titleTextColor }}>
-              Doanate ${price}
+              Donate ${price}
             </button>
           </div>
         </div>

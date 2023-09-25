@@ -29,7 +29,7 @@ const Donation = () => {
           {donation.slice(0, dataLength).map((donationItem) => (
             <DonationCard key={donationItem.id} donationItem={donationItem}></DonationCard>
           ))}
-          <div className="col-span-2 text-center">
+          <div className="lg:col-span-2 text-center">
             <div className={(donation.length < 4 || dataLength === donation.length) && "hidden"}>
               <button onClick={handleSeeAllBtn} className="btn bg-[#009444] rounded-md text-white px-7 py-3 normal-case">
                 See All

@@ -16,7 +16,7 @@ const Card = () => {
     }
   }, [cards, id]);
   return (
-    <div>
+    <div className="card rounded-md container py-10 mx-auto px-4 lg:px-32 z-20">
       <ItemCard card={card}></ItemCard>
     </div>
   );

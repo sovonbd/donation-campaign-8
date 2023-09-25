@@ -4,11 +4,11 @@ const DonationCard = ({ donationItem }) => {
   const { id, image, category, title, price, cardBackgroundColor, categoryNameBackgroundColor, titleTextColor } = donationItem;
   return (
     <div>
-      <div className="flex flex-col md:flex-row items-center px-12 md:p-0">
+      <div className="flex flex-col md:flex-row items-center px-6 md:p-0">
         <figure>
-          <img className="w-[320px] md:w-[320px] h-[194px] rounded-md rounded-b-none md:rounded-br-none md:rounded-bl-md md:rounded-r-none" src={image} alt="Shoes" />
+          <img className="w-[360px] md:w-[320px] h-[194px] rounded-md rounded-b-none md:rounded-br-none md:rounded-bl-md md:rounded-r-none" src={image} alt="Shoes" />
         </figure>
-        <div className="p-2 w-full rounded-md rounded-l-none rounded-tr-none md:rounded-tr-md flex flex-col justify-start py-[14px] space-y-2" style={{ backgroundColor: cardBackgroundColor }}>
+        <div className="p-2 w-full rounded-md rounded-tl-none md:rounded-l-none rounded-tr-none md:rounded-tr-md flex flex-col justify-start py-[14px] space-y-2" style={{ backgroundColor: cardBackgroundColor }}>
           <p className="w-max text-sm px-2 rounded-sm font-medium py-1" style={{ backgroundColor: categoryNameBackgroundColor, color: titleTextColor }}>
             {category}
           </p>

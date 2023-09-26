@@ -5,43 +5,31 @@ import { PieChart, Pie, Cell, Legend } from "recharts";
 const Statistics = () => {
   const [donation, setDonation] = useState([]);
   const [noFound, setNoFound] = useState("");
-  const [amount, setAmount] = useState([]);
-  const [totalDonated, setTotalDonated] = useState(0);
-  const [totalPrice, setTotalprice] = useState(0);
+  const [totalCards, setTotalCards] = useState(0);
 
   const cards = useLoaderData();
-  console.log(cards);
-
   useEffect(() => {
     if (cards) {
-      const cardPrice = cards.map((card) => card.price);
-
-      const totalPrice = cardPrice.reduce((init, current) => init + current, 0);
-      console.log(totalPrice);
-      setTotalprice(totalPrice);
+      const totalCards = cards.length;
+      console.log(totalCards);
+      setTotalCards(totalCards);
     }
-  }, []);
+  }, [cards]);
 
   useEffect(() => {
     const donationItems = JSON.parse(localStorage.getItem("donation"));
 
     if (donationItems) {
-      setDonation(donationItems);
-
-      const prices = donationItems.map((donation) => donation.price);
-      setAmount(prices);
-
-      const total = prices.reduce((init, current) => init + current, 0);
-      setTotalDonated(total);
-      //   console.log(total);
+      const donationCards = donationItems.length;
+      setDonation(donationCards);
     } else {
       setNoFound("No Data Found");
     }
   }, []);
 
   const data = [
-    { name: "Total Donation", value: 100 - (totalDonated * 100) / totalPrice },
-    { name: "Your Donation", value: (totalDonated * 100) / totalPrice },
+    { name: "Total Donation", value: 100 - (donation * 100) / totalCards },
+    { name: "Your Donation", value: (donation * 100) / totalCards },
   ];
   const data0 = [
     { name: "Total Donation", value: 100 },

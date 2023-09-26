@@ -28,7 +28,7 @@ const Searchbox = ({ setSearch }) => {
             id=""
             placeholder="Search here..."
           />
-          <input type="submit" value="Search" className="bg-[#FF444A] border-none px-7 rounded-lg text-white font-semibold btn hover:bg-[#FF444A] focus:bg-[#FF444A]" />
+          <input type="submit" value="Search" className="bg-[#FF444A] border-none rounded-l-none px-7 rounded-lg text-white font-semibold btn hover:bg-[#FF444A] focus:bg-[#FF444A]" />
         </form>
       </div>
     </div>

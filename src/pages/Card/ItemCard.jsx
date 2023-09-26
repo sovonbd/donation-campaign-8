@@ -31,7 +31,7 @@ const ItemCard = ({ card }) => {
     <div>
       <div className="">
         <div className="relative mx-auto">
-          <img className="z-0 w-full rounded-md" src={image} alt="Shoes" />
+          <img className="z-0 w-full h-[70vh] rounded-md" src={image} style={{objectFit: 'cover'}} alt="Shoes" />
           <div className="bg-[#0B0B0B80] z-10 mx-auto absolute bottom-0 w-full p-9">
             <button onClick={handleClick} className="btn normal-case text-white rounded-md border-none px-6 py-4" style={{ backgroundColor: titleTextColor }}>
               Donate ${price}

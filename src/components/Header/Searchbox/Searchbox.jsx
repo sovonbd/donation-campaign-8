@@ -30,10 +30,8 @@ const Searchbox = ({ setSearch }) => {
           <input type="submit" value="Search" className="bg-[#FF444A] border-none px-7 rounded-l-none rounded-lg text-white font-semibold btn hover:bg-[#FF444A] focus:bg-[#FF444A]" />
         </form>
       </div>
-      
     </div>
   );
 };
-
 
 export default Searchbox;

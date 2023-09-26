@@ -19,7 +19,7 @@ const Navbar = () => {
         </ul>
       </div> */}
 
-      <div className="container py-10 mx-auto px-0 lg:px-32 z-20">
+      <div className="container py-10 mx-auto px-0 lg:px-32 z-50">
         <div className="navbar bg-base-100">
           <div className="flex w-full md:w-1/2 justify-between">
             <a>

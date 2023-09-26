@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 
 const Searchbox = ({ setSearch }) => {
   const [search, setSearchValue] = useState("");
@@ -21,17 +22,20 @@ const Searchbox = ({ setSearch }) => {
           <input
             onChange={handleSearchText}
             value={search}
-            className="bg-white p-3 border border-[#DEDEDE] rounded-lg rounded-r-none w-[380px] focus:outline-[#FF444A] focus:border-none "
+            className="bg-white p-3 border border-[#DEDEDE] rounded-lg rounded-r-none md:w-[380px] focus:outline-[#FF444A] focus:border-none "
             type="search"
             name="name"
             id=""
             placeholder="Search here..."
           />
-          <input type="submit" value="Search" className="bg-[#FF444A] border-none px-7 rounded-l-none rounded-lg text-white font-semibold btn hover:bg-[#FF444A] focus:bg-[#FF444A]" />
+          <input type="submit" value="Search" className="bg-[#FF444A] border-none px-7 rounded-lg text-white font-semibold btn hover:bg-[#FF444A] focus:bg-[#FF444A]" />
         </form>
       </div>
     </div>
   );
 };
 
+Searchbox.propTypes = {
+  setSearch: PropTypes.func,
+};
 export default Searchbox;

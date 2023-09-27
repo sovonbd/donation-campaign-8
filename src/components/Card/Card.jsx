@@ -11,7 +11,7 @@ const Card = ({ card }) => {
             <img className="w-full h-[194px]" src={image} alt="Shoes" />
           </figure>
           <div className="card-body p-2 rounded-md rounded-t-none" style={{ backgroundColor: cardBackgroundColor }}>
-            <p className="w-max text-sm px-2 rounded-sm font-medium py-1" style={{ backgroundColor: categoryNameBackgroundColor, color: titleTextColor }}>
+            <p className="w-max text-sm px-2 rounded-md font-medium py-1" style={{ backgroundColor: categoryNameBackgroundColor, color: titleTextColor }}>
               {category}
             </p>
             <h2 style={{ color: titleTextColor }} className="card-title">

@@ -30,7 +30,7 @@ const Donation = () => {
             <DonationCard key={idx} donationItem={donationItem}></DonationCard>
           ))}
           <div className="lg:col-span-2 text-center">
-            <div className={(donation.length < 4 || dataLength === donation.length) && "hidden"}>
+            <div className={donation.length < 4 || dataLength === donation.length ? "hidden" : ""}>
               <button onClick={handleSeeAllBtn} className="btn bg-[#009444] rounded-md text-white px-7 py-3 normal-case">
                 See All
               </button>

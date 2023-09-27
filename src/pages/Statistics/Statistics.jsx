@@ -11,7 +11,6 @@ const Statistics = () => {
   useEffect(() => {
     if (cards) {
       const totalCards = cards.length;
-      console.log(totalCards);
       setTotalCards(totalCards);
     }
   }, [cards]);
